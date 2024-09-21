@@ -6,6 +6,8 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.stream.Collectors;
+
 @Data
 @Service
 public class CarService {
@@ -14,5 +16,17 @@ public class CarService {
 
     public Iterable<Car> getAllCar(){
         return carRepository.findAll();
+    }
+
+    public Car saveCar(Car newCar){
+        return this.carRepository.save(newCar);
+    }
+
+    public Car getCarById(Long id){
+        return this.carRepository.findById(id).orElse(null);
+    }
+
+    public void deleteCarById(Long id){
+        this.carRepository.deleteById(id);
     }
 }
