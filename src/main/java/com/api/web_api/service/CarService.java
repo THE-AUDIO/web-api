@@ -29,4 +29,10 @@ public class CarService {
     public void deleteCarById(Long id){
         this.carRepository.deleteById(id);
     }
+    public Iterable<Car> getCarByBrand(String brand){
+        return this.carRepository.findByBrand(brand);
+    }
+    public Iterable<Car> getCarByYears(int year){
+        return this.carRepository.findByYears(year);
+    }
 }
