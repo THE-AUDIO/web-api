@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+:root {
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;
+    --main: #1a73e8;
+    --second: #0C47A1;
+    --my-white: #fff;
+    --third: #202124;
+    --third1: #202124ef;
+};
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+    padding: 0;
+}
+.login{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .left{
+    height: 100%;
+    width: 50%;
+    background-color: var(--main);
+    color: var(--my-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+   object-fit: cover;
+   box-shadow: 0 0 .5rem var(--my-white);
+   border-radius: 50%;
+   animation: rot 2s alternate-reverse 2s infinite both;
+}
+@keyframes rot {
+    from { transform: rotate(-40deg); }
+    to { transform: rotate(40deg); }
+}
+
+.login .right{
+    height: 100%;
+    width: 50%;
+    /* background-color: #f2f2f2; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right .form-container{
+    height: 85%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-container .form-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 30%;
+}
+.form-header .texte-logo{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40%;
+    margin: 0;
+}
+.texte-logo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.texte-logo h2 .title{
+    font-size: 2rem;
+}
+.texte-logo h2 .sub-title{
+    font-size: 1.2rem;
+}
+
+.form-header .auth-by{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.form-header .g{
+    height: 5vh;
+    width: 65%;
+    border-radius: .5rem;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-header .ap{
+    height: 5vh;
+    width: 65%;
+    border-radius: .5rem;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.g img{
+    height: 60px;
+    width: 60px;
+}
+.g span{
+    font-size: 1.2rem;
+    color: var(--third);
+    padding-left: 1rem;
+}
+.ap svg{
+    height: 36px;
+    width: 36px;
+    fill: var(--my-white);
+}
+.ap span{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    color: var(--my-white);
+}
+
+.form-container .medium{
+    height: 30%;
+    width: 100%;
+}
+.form-container .or-separator{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+}
+.or-separator .sep1, .sep2{
+    width: 45%;
+    height: 2px;
+    background-color: var(--third);
+}
+.the0-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.the0-form .show-class{
+    width: 65%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show-class input[type="checkbox"]{
+    width: 20px !important;
+    height: 20px !important;
+    transition: 200ms  ease-in-out;
+}
+.show-class input[type="checkbox"]:checked{
+    background-color: var(--main);
+}
+.show-class label{
+    font-size: 1.1rem;
+    margin-left: .6rem;
+}
+.the0-form .input-elt{
+    width: 65%;
+    height: 30%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-elt input{
+    width: 95%;
+    outline: none;
+    height: 4vh;
+    border: 1px solid var(--third1);
+    padding-left: 1rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+.the0-form .btn-c{
+    width: 65%;
+    height: 5vh;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    border: none;
+    transition: 200ms ease-in-out;
+    /* box-shadow: 0 0 .2rem black; */
+    cursor: pointer;
+    background-color: var(--main);
+    color: var(--my-white);
+    font-weight: bold;
+}
+
+.btn-c:active{
+    transform: scale(.95);
+}
+
+.form-container .form-footer{
+    padding-top: 1rem;
+    height: 15%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.form-footer .cdt{
+    width: 65%;
+    text-align: center;
+    /* letter-spacing: 2px; */
+    padding: 0;
+    margin: 0;
+}
+@media  screen and (max-width: 1346px) {
+    .form-container{
+        width: 80% !important;
+    }
+}
+@media screen and (max-width:1090px) {
+    .form-container{
+        width: 90% !important;
+    }
+}
+@media  screen and (max-width: 1023px) and (min-width:768px) {
+        .left{
+            display: none !important;
+        }
+        .right{
+            width: 80% !important;
+        }
+}
+@media screen  and (max-width:767px){
+    .left{
+        display: none !important;
+    }
+    .right{
+        width: 100% !important;
+        height: 100%;
+    }
+    .right .form-container{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .form-container .form-header .g, .ap{
+        height: 8vh !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+    .form-container .medium .input-elt{
+        width: 80%;
+        /* align-items: center !important; */
+    }
+    .form-container .medium .input-elt input{
+        height: 6vh !important;
+        width: 100% !important;
+
+    }
+
+    .form-container .medium  .btn-c{
+        height: 7vh !important;
+        width: 80% !important;
+        margin: 0 auto !important;
+        border-radius: 0;
+    }
+    .form-container .or-separator{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
