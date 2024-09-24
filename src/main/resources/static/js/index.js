@@ -11,28 +11,28 @@ function togglePasswordVisibility() {
 checked.addEventListener('click',()=>{
     togglePasswordVisibility()
 });
-//function login(){
-//const  email = document.getElementById('email').value;
-//const password = pass.value;
-//    const data = {
-//        email,
-//        password
-//    }
-//   console.log(data)
-//   const apiUrl = 'http://localhost:9000/login';
-//   fetch(apiUrl,{
-//       method: 'POST',
-//       headers: {
-//           'content-type': 'application/json',
-//       },
-//       body: JSON.stringify(data)
-//
-//   })
-//   .then(response => response.json())
-//   .then(response => console.log(response))
-//}
-//
-//btnSubmit.addEventListener('click',(e)=>{
-//    e.preventDefault()
-//    login()
-//})
+function login(){
+const  email = document.getElementById('email').value;
+const password = pass.value;
+    const data = {
+        email,
+        password
+    }
+   console.log(data)
+   const apiUrl = 'http://localhost:9000/login';
+   fetch(apiUrl,{
+       method: 'POST',
+       headers: {
+           'content-type': 'application/json',
+       },
+       body: JSON.stringify(data)
+
+   })
+   .then(response => response.json())
+   .then(response => console.log(response))
+}
+
+btnSubmit.addEventListener('click',(e)=>{
+    e.preventDefault()
+    login()
+})

@@ -45,7 +45,6 @@ public class Securityconfig {
        return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .formLogin(httpForm ->{
-                    httpForm.loginPage("/signup");
                     httpForm.loginPage("/login").permitAll();
                 })
                .authorizeHttpRequests(registry ->{
