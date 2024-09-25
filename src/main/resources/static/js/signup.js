@@ -1,6 +1,7 @@
 const pass = document.getElementById('password');
 const checked = document.getElementById('show');
 const btnSubmit = document.querySelector('.btn-c');
+const form = document.querySelector('form')
 function togglePasswordVisibility() {
     if (checked.checked) {
         pass.type = 'text';

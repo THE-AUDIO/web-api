@@ -12,14 +12,14 @@ checked.addEventListener('click',()=>{
     togglePasswordVisibility()
 });
 function login(){
-const  email = document.getElementById('email').value;
+const  username = document.getElementById('username').value;
 const password = pass.value;
     const data = {
-        email,
+        username,
         password
     }
    console.log(data)
-   const apiUrl = 'http://localhost:9000/login';
+   const apiUrl = 'http://localhost:9000/api/auth/login';
    fetch(apiUrl,{
        method: 'POST',
        headers: {
@@ -33,6 +33,6 @@ const password = pass.value;
 }
 
 btnSubmit.addEventListener('click',(e)=>{
-    e.preventDefault()
-    login()
+      e.preventDefault();
+    login();
 })
